@@ -2,7 +2,7 @@
 
 ## Visión rectora
 
-**No es un simulador de limpiar botellas. Es un simulador de logística de un
+** Es un simulador de logística de un
 proceso de reciclado que comienza a escala hormiga y termina a escala elefante.**
 
 El MVP es la hormiga: un inventario, una botella a la vez, procesar a mano. Todo
