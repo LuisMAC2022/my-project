@@ -1,16 +1,16 @@
-// calcularPrecio.test.js
+// test/calcularPrecio/calcularPrecio.test.js
 // Especificación ejecutable de calcularPrecio.
 // Los 4 invariantes del DESIGN.md, como tests. Estos NO cambian aunque se
 // ajusten los números de balance: verifican RELACIONES, no solo valores.
 //
-// Correr con:  node calcularPrecio.test.js
+// Correr con:  node test/calcularPrecio/calcularPrecio.test.js
 //
-// NOTA: importa desde ./calcularPrecio.js, que el agente debe implementar.
+// NOTA: importa desde ../../src/calcularPrecio/calcularPrecio.js, que el agente debe implementar.
 // Mientras no exista, este archivo falla al importar — eso es correcto:
 // el test es la especificación que se escribe ANTES que la implementación.
 
-import { calcularPrecio } from "./calcularPrecio.js";
-import { assertEqual, assert, resumen } from "./test_runner.js";
+import { calcularPrecio } from "../../src/calcularPrecio/calcularPrecio.js";
+import { assertEqual, assert, resumen } from "../../lib/test-runner.js";
 
 // --- Helpers para construir botellas legibles ---
 // Botella base: todos los campos. Se sobreescribe lo que cada test necesite.
