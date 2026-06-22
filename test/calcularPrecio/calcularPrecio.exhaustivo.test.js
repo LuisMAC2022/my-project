@@ -1,11 +1,13 @@
-// exhaustivo.test.js
+// test/calcularPrecio/calcularPrecio.exhaustivo.test.js
 // Verificación exhaustiva: genera las 32 botellas posibles (5 booleanos) y
 // comprueba PROPIEDADES sobre todas. Cierra el hueco de "¿y la botella que no
 // probé a mano?". Esto es lo que TLA+ presumiría, en vanilla JS, sobre el
 // espacio de estados COMPLETO (porque aquí el espacio es finito y pequeño).
+//
+// Correr con:  node test/calcularPrecio/calcularPrecio.exhaustivo.test.js
 
-import { calcularPrecio } from "./calcularPrecio.js";
-import { assert, resumen } from "./test_runner.js";
+import { calcularPrecio } from "../../src/calcularPrecio/calcularPrecio.js";
+import { assert, resumen } from "../../lib/test-runner.js";
 
 // --- Generar las 32 botellas posibles ---
 // 5 booleanos => 2^5 = 32 combinaciones. Las enumeramos todas.

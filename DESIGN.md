@@ -2,7 +2,7 @@
 
 ## Visión rectora
 
-** Es un simulador de logística de un
+**Es un simulador de logística de un
 proceso de reciclado que comienza a escala hormiga y termina a escala elefante.**
 
 El MVP es la hormiga: un inventario, una botella a la vez, procesar a mano. Todo
@@ -34,7 +34,9 @@ congelan aquí antes de delegar.
   congelada, reglas, invariantes. Lo necesario para usar o implementar el módulo.
 - **DECISIONES.md (uno por módulo, junto al código):** POR QUÉ se tomaron las
   decisiones, qué alternativas se descartaron, cómo fue la iteración con el
-  agente. Razonamiento histórico, no contrato.
+  agente. Razonamiento histórico, no contrato. La ruta canónica es
+  `src/<modulo>/DECISIONES.md`: el agente implementador escribe un primer
+  borrador y el humano lo revisa.
 Si borraras un DECISIONES.md, el módulo seguiría siendo implementable (el contrato
 está aquí) pero perderías el porqué. Si borraras la sección de DESIGN.md, no
 sabrías qué construir.
@@ -65,6 +67,12 @@ reciclaje-pet/
         ├── acciones.test.js
         └── acciones.exhaustivo.test.js
 ```
+
+`lib/` contiene infraestructura compartida de verificación, como el runner de
+tests. `test/` contiene especificaciones ejecutables por módulo. `src/` contiene
+solo código productivo y decisiones del módulo; por eso los `DECISIONES.md` viven
+en `src/<modulo>/DECISIONES.md` y la infraestructura compartida NO debe moverse a
+`test/`.
 
 ### Por qué test/ está SEPARADO de src/ (decisión deliberada)
 Cuando se delega un módulo a un agente, se le entrega SOLO su carpeta de `src/`
